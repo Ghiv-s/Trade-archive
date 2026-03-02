@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Trades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">All Trades</h2>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Instrument</th>
+                <th>Gap</th>
+                <th>1 Bar</th>
+                <th>2 Bar</th>
+                <th>Structure</th>
+                <th>Screenshot</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in trades %}
+            <tr>
+                <td>{{ t[0] }}</td>
+                <td>{{ t[2] }}</td>
+                <td>{{ t[3] }}</td>
+                <td>{{ t[4] }}</td>
+                <td>{{ t[5] }}</td>
+                <td>{{ t[6] }}</td>
+                <td>{{ t[7] }}</td>
+                <td>
+                    <img src="{{ url_for('static', filename='images/' + t[1].split('/')[-1].split('\\')[-1]) }}" 
+     alt="screenshot" width="100">
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/" class="btn btn-light mt-3">Back</a>
+
+</div>
+
+</body>
+</html>

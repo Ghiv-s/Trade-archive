@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Trade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+    <div class="card bg-secondary p-4">
+        <h2 class="mb-4">Add Screenshot</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" name="date" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Instrument</label><br>
+                <input type="radio" name="Instrument" value="DAX" checked> DAX
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Gap</label><br>
+                <input type="radio" name="Gap" value="Gap Up" required> Gap Up
+                <input type="radio" name="Gap" value="Gap Down"> Gap Down
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">1 Bar</label><br>
+                <input type="radio" name="1 Bar" value="Positive" required> Positive
+                <input type="radio" name="1 Bar" value="Negative"> Negative
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">2 Bar</label><br>
+                <input type="radio" name="2 Bar" value="Positive" required> Positive
+                <input type="radio" name="2 Bar" value="Negative"> Negative
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">2 Bar Structure</label><br>
+                <input type="radio" name="2 Bar Structure" value="Inside" required> Inside
+                <input type="radio" name="2 Bar Structure" value="Outside"> Outside
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Screenshot</label>
+                <input type="file" class="form-control" name="screenshot" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Upload</button>
+            <a href="/stats" class="btn btn-info">Statistics</a>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
